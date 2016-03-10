@@ -9,35 +9,36 @@
           $("button").click(function(){
             var name= $("#userName").val();
             $("name").css('font-family','Lucida Console','Monaco','monospace','font-size',
-            '200px');
+            '200%');
             
+            var color= $(".color").val();
+            $("#red").css('background-color','red');
+            $("#purple").css('background-color','purple');
+            $("#blue").css('background-color','blue');
+            $("#orange").css('background-color','orange');
+            $("#yellow").css('background-color','orange');
+             $("#section").hide
             });
-          
-          
-          
-          
-          
-          
-          
         });
         
     </script>
   </head>
   <body>
-      <div>
-        <form>
+    <div id="header">
+      <div id="section">
+        
   Name:<br>
   <input type="text" name="userName" id="userName"></input><br>
   Pick a color<br>
-  <input type="radio" name="color" value="red" class="color">red</input><br>
-  <input type="radio" name="color" value="purple" class="color">purple</input><br>
-  <input type="radio" name="color" value="blue" class="color">blue</input><br>
-  <input type="radio" name="color" value="orange" class="color">orange</input><br>
-  <input type="radio" name="color" value="yellow" class="color">yellow</input><br>
+  <input type="radio" name="color" value="red" class="color" id="red">red</input><br>
+  <input type="radio" name="color" value="purple" class="color" id="purple">purple</input><br>
+  <input type="radio" name="color" value="blue" class="color" id="blue">blue</input><br>
+  <input type="radio" name="color" value="orange" class="color" id="orange">orange</input><br>
+  <input type="radio" name="color" value="yellow" class="color" id="yellow">yellow</input><br>
   Slogan:<br>
   <input type="text" name="sloganName"></input><br>
   <button>Make Banner</button>
-  </form>
+  </div>
   </div>
   
   </body>
