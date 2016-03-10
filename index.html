@@ -7,38 +7,48 @@
     <script>
         $(function(){
           $("button").click(function(){
+            $("#result")(function(){
             var name= $("#userName").val();
-            $("name").css('font-family','Lucida Console','Monaco','monospace','font-size',
-            '200%');
+            $("name").css('font-family','Lucida Console','Monaco','monospace');
+            $("name").css('font-size','100px');
             
-            var color= $(".color").val();
-            $("#red").css('background-color','red');
-            $("#purple").css('background-color','purple');
-            $("#blue").css('background-color','blue');
-            $("#orange").css('background-color','orange');
-            $("#yellow").css('background-color','orange');
-             $("#section").hide
+            var slogan= $("#sloganName").val();
+            $("slogan").css('font-size','50px');
+            
+            var color= $("#color").val();
+         var colorUser = $('#color').val();
+        $('#result').css('background-color', colorUser);
+        $('#result').val(colorUser);
+            
+            $("#survey").hide();
+            });
+    
             });
         });
         
     </script>
+    <style>
+      #result{
+        width:750px;
+        height:500px;
+      }
+    </style>
   </head>
   <body>
-    <div id="header">
-      <div id="section">
+    
+      <div id="survey">
         
   Name:<br>
   <input type="text" name="userName" id="userName"></input><br>
-  Pick a color<br>
-  <input type="radio" name="color" value="red" class="color" id="red">red</input><br>
-  <input type="radio" name="color" value="purple" class="color" id="purple">purple</input><br>
-  <input type="radio" name="color" value="blue" class="color" id="blue">blue</input><br>
-  <input type="radio" name="color" value="orange" class="color" id="orange">orange</input><br>
-  <input type="radio" name="color" value="yellow" class="color" id="yellow">yellow</input><br>
   Slogan:<br>
-  <input type="text" name="sloganName"></input><br>
+  <input type="text" name="sloganName" id="sloganName"></input><br>
+  Pick a color<br>
+  <input type="text" name="color" id="color"></input><br>
+  
   <button>Make Banner</button>
   </div>
+  <div id="result">
+    
   </div>
   
   </body>
